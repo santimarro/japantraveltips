@@ -20,11 +20,18 @@ logging.basicConfig(
 # Define your FastAPI endpoint
 FASTAPI_ENDPOINT = "http://localhost:8000/api/chat/request"
 
-
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-
 # Dictionary to store chat histories
 chat_histories = {}
+
+
+def clean_message(message: str):
+    import re
+
+    # Remove all markdown tags
+    cleaned_message = re.sub(
+        r"(\*\*|__|~~|`|#|\*|_|>|-|\+|=|!|\[|\]|\(|\))", "", message
+    )
+    return cleaned_message
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -61,8 +68,11 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Add bot response to chat history
     chat_histories[chat_id].append({"role": "assistant", "content": bot_response})
 
-    # Send the response back to the user
-    await context.bot.send_message(chat_id=chat_id, text=bot_response)
+    # Send the response back to the user with MarkdownV2 parsing
+    await context.bot.send_message(
+        chat_id=chat_id,
+        text=clean_message(bot_response),
+    )
 
 
 async def caps(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -77,12 +87,8 @@ async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-async def start_telegram_bot():
-    application = (
-        ApplicationBuilder()
-        .token(TELEGRAM_BOT_TOKEN)
-        .build()
-    )
+async def start_telegram_bot(TELEGRAM_BOT_TOKEN):
+    application = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).build()
 
     # Add handlers
     start_handler = CommandHandler("start", start)

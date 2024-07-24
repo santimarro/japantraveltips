@@ -6,6 +6,7 @@ from app.engine.index import get_index
 from llama_index.core.tools import ToolMetadata
 from llama_index.tools.wikipedia import WikipediaToolSpec
 
+
 def get_chat_engine(filters=None):
     system_prompt = os.getenv("SYSTEM_PROMPT")
     top_k = os.getenv("TOP_K", "3")
@@ -18,14 +19,14 @@ def get_chat_engine(filters=None):
             similarity_top_k=int(top_k), filters=filters
         )
         query_engine_tool = QueryEngineTool(
-                query_engine=query_engine,
-                metadata=ToolMetadata(
-                    name="JapanTravelTips",
-                    description="Search for posts as they appear in JapanTravelTips",
-                ))
+            query_engine=query_engine,
+            metadata=ToolMetadata(
+                name="JapanTravelTips",
+                description="Always use to find relevant advice, suggestions and any other non-historical information about Japan.",
+            ),
+        )
         tools.append(query_engine_tool)
 
-    
     wikipedia_tool_spec = WikipediaToolSpec()
     tool_list = wikipedia_tool_spec.to_tool_list()
     # Add additional tools

@@ -44,7 +44,7 @@ async def chat(
 
         event_handler = EventCallbackHandler()
         chat_engine.callback_manager.handlers.append(event_handler)  # type: ignore
-        response = await chat_engine.astream_chat(last_message_content, messages)
+        response = await chat_engine.astream_chat(last_message_content, messages, tool_choice="JapanTravelTips")
 
         return VercelStreamResponse(request, event_handler, response)
     except Exception as e:
@@ -104,7 +104,7 @@ async def chat_request(
 ) -> Result:
     last_message_content = data.get_last_message_content()
     messages = data.get_history_messages()
-    response = await chat_engine.achat(last_message_content, messages)
+    response = await chat_engine.achat(last_message_content, messages, tool_choice="JapanTravelTips")
     return Result(
         result=Message(role=MessageRole.ASSISTANT, content=response.response),
         nodes=SourceNodes.from_source_nodes(response.source_nodes),

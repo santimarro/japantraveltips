@@ -37,15 +37,18 @@ if environment == "dev":
     async def redirect_to_docs():
         return RedirectResponse(url="/docs")
 
+
 def mount_static_files(directory, path):
     if os.path.exists(directory):
         app.mount(path, StaticFiles(directory=directory), name=f"{directory}-static")
+
 
 mount_static_files("data", "/api/files/data")
 mount_static_files("output", "/api/files/output")
 
 app.include_router(chat_router, prefix="/api/chat")
 app.include_router(file_upload_router, prefix="/api/chat/upload")
+
 
 async def main():
     app_host = os.getenv("APP_HOST", "0.0.0.0")
@@ -56,13 +59,15 @@ async def main():
     server = uvicorn.Server(config)
 
     # Start the Telegram bot
-    telegram_task = asyncio.create_task(start_telegram_bot())
+    TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+    telegram_task = asyncio.create_task(start_telegram_bot(TELEGRAM_BOT_TOKEN))
 
     # Run the FastAPI app
     await server.serve()
 
     # Wait for the Telegram bot task to complete (it should run indefinitely)
     await telegram_task
+
 
 if __name__ == "__main__":
     asyncio.run(main())
