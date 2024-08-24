@@ -87,13 +87,13 @@ Disagree heavily on ATM part, SoftBank (7-11?) offer great rates if you have a n
 
 ### Comment 3
 
-I'm surprised about the currency exchange... getting better rates in airport?
+Chains are not made for foreigners lmao. Where do people get these ideas from?
 
 ### Comment 4
 
-Take the NEX for sure! Value for money and your time
+I'm surprised about the currency exchange... getting better rates in airport?
 
 ### Comment 5
 
-Chains are not made for foreigners lmao. Where do people get these ideas from?
+Take the NEX for sure! Value for money and your time
 

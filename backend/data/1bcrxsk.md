@@ -46,5 +46,17 @@ I'm obsessed with BaoBao bags...a store called SouSou in Kyoto and Tokyo. Beauty
 
 ### Comment 5
 
-got some nail clippers at Muji which cut nails like butter. Also if you like cooking Kappabashi is amazing, I got a nice knife but could have bought a lot of ceramics and baking equipment (cake tins in any shape you can imagine) if I wasn't worried about bag wait.
+You can buy nice accessories like umbrellas, wallets, washcloths, etc. at places like Tokyu Hands and LoFT. These stores also carry nice perfumes, haircare, skincare, and bath products.
+
+Stores like Donki have some decent beauty products, but you'll find them cheaper at drug stores. When I've come to Japan I've brought back foundation compacts (very popular in Japan and make your skin look flawless), mascara, sparkly eyeshadow, etc.
+
+If you like cooking, I recommend stopping by a local supermarket and stocking up on ingredients you can bring home. Last time I went to Japan I brought back some bottles of soy sauce, sukiyaki sauce, soup stock concentrate, teabags, etc. Houjicha is a really nice toasted green tea that is largely available in Japan but rarer overseas. Cooking mochi also has a long shelf life and can be added to hot pot and soups. 
+
+As for clothes and accessories, stores like GU offer nice discounted streetwear at a cheaper price than their sister store, UNIQLO, and as far as I know they aren't overseas. MUJI has nice things too.
+
+I usually bring home some pens, mechanical pencils, stationary, beads, sewing and crochet supplies, etc.
+
+Can't go wrong with some cute gachapon keychains...
+
+Honestly, ¥100 shops like Daiso offer a lot of stuff.
 

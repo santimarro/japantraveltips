@@ -24,13 +24,9 @@ https://discord.gg/japantravel
 
 ### Comment 4
 
-Had a day to myself so I wandered alone to shinjuku and shibuya hitting up all of my favorite places and some new ones eating everything in sight. Grabbed curry bread, Hokkaido soft cream, sushi, ramen, pastries and hit up a bunch of grocery stores to stock up on soy, dashi, soba noodles, coffee beans and a bunch of other stuff. I'm a fat fuck
+I went to an antique flea market. You can find SUCH AMAZING STUFF for great prices.
 
 ### Comment 5
 
-I never go to Tokyo without spending at least one night in a high rise bar, and it's always in the top 5 things I do on any trip there for business or pleasure.
-
-The city at night stretches out to the horizon in every direction.  It's like humanity all joined hands to pull the stars from the sky down to earth to warm themselves.  Every light is a person's hopes, dreams, and fears.
-
-Sitting with a drink and watching the city breathe in and out as the red warning lights pulse is as close as I get to a religious experience.
+Had a day to myself so I wandered alone to shinjuku and shibuya hitting up all of my favorite places and some new ones eating everything in sight. Grabbed curry bread, Hokkaido soft cream, sushi, ramen, pastries and hit up a bunch of grocery stores to stock up on soy, dashi, soba noodles, coffee beans and a bunch of other stuff. I'm a fat fuck
 

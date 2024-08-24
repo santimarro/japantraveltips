@@ -59,7 +59,5 @@ THANKS SO MUCH!
 
 ### Comment 5
 
-Just got tickets. We used 8 devices. Only two came in under 8000. One was 504, so that didn't take long. The next lowest was 2000 - we thought we'd monitor it so that we could share info for future ticket hunters. 2000 came up to purchase at about 10:35am. And I think there were tickets available on everyday still, though some slots (mostly 10am) were sold out and some showed low availability. 
-
-We also had multiple browsers going on two devices and it didn't appear to hurt us. The 504 was on a laptop that had a second browser open. We did allow cookies as suggested. We received error messages at three points during the checkout process. We refreshed and crossed our fingers.
+~~Almost~~ everything full. I couldn't get a ticket sadly. I had hope but after a couple of steps it still said that I couldn't get in.
 

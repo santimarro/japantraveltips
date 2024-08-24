@@ -35,11 +35,7 @@ Ngl shinjuku is terrible where that Godzilla statue area is.
 
 ### Comment 5
 
-You shove shit in my face it’s getting pushed out of the way and I’ll keep walking 🤷‍♀️ 
+I had my first encounter with them last night. I already knew to ignore them from reading the posts here so as soon as I see one making eye contact with me I was like fuuck. I turned to a different alley and he kept trying to talk to me and eventually chased after me. When he caught up with me I told him no English and then he starts talking in Spanish and then in Portuguese (I’m Hispanic) and I was like damn this guy is good. I stayed quiet and kept ignoring him. Next thing I know the alley cuts off into 2 directions and there’s a group of 4 Nigerians at the center and that’s when I really started getting scared. I was like fuck they’re gonna try to jump me but they just looked at me as I kept walking and eventually the other guy left me alone. It was still pretty early and there were people walking around but fuck that they’ve discouraged me from walking around that area. My hotel is in Kabukicho so I gotta find an alternative route to avoid them lol. They seem to be all over Kabukicho too, you avoid one and another takes it’s place, if you’re out there avoid walking alone late at night.
 
-You try to start a fight I’ll call the cops
-
-Also dude wtf post on Reddit vs calling the cops wtf
-
-Edit: this guys pretty dumb I’m literally in Tokyo lolike
+Also I was in the koreatown area north of Kabukicho this morning and I see them walking around naturally among the locals not pestering anyone. I just found it funny like they haven’t started their shift yet in annoying people.
 

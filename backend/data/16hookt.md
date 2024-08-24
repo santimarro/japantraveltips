@@ -18,6 +18,10 @@ Instead of buying a ticket to something like Skytree to see the city, go to a hi
 
 ### Comment 3
 
+Probably an unpopular opinion but paying to upgrade from Economy to Premium Economy for the flight there or back is one that I've never really regretted.
+
+### Comment 4
+
 This is a great question. I’ve been going back an fort to Japan for 20 years and I see so many people passing up once in a lifetime experiences just to save $3. 
 
 A lot of good suggestions were already made, but I also want point out that Tokyo (and Japan in general) is the epicenter of international fashion. 
@@ -27,10 +31,6 @@ Spend some time shopping at the department stores like OIOI (pronounced “marui
 If you’re into outdoor wear, check out Mont Bell which is their version of Patagonia. Comme ca Ism is the Japanese version of Zara. If you don’t like the clothes, check out Porter bags (Yoshida and Co). I get compliments all the time on the Porter business bag I bring to work. Also, there are literally too many Japanese denim brands to mention. 
 
 Fashion may not be your thing, but I think this is often overlooked. Personally, I bring an empty suitcase with me every time I’m there and fill it with clothes on the way back.
-
-### Comment 4
-
-Probably an unpopular opinion but paying to upgrade from Economy to Premium Economy for the flight there or back is one that I've never really regretted.
 
 ### Comment 5
 
