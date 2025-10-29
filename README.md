@@ -1,137 +1,97 @@
-# JapanTravelTips API
+# Travel Assistant Telegram Bot
 
-## Overview
-
-JapanTravelTips is a FastAPI-based Retrieval-Augmented Generation (RAG) system designed to interact with a Language Learning Model (LLM) to generate answers for user queries related to traveling in Japan. The system aims to provide advice, tips, and historical information to users, leveraging a rich knowledge base sourced from the subreddit r/JapanTravelTips and Wikipedia.
+A Telegram bot that helps users with travel-related queries. The bot can provide historical information, travel tips, and answer general questions about destinations.
 
 ## Features
 
-- **Travel Advice**: Get recommendations on transportation, accommodations, dining, and sightseeing.
-- **Historical Information**: Query historical data about specific locations, shrines, and cultural landmarks.
-- **Real-time Interaction**: Interact with the system in real-time to get immediate responses to your travel-related 
-questions.
-- **Telegram Bot Integration**: Chat with the system via a Telegram bot that forwards user messages to the API and replies with the LLM-generated responses.
+- **Intent Classification**: Automatically determines whether your query is about historical information, travel advice, or conversational.
+- **Multiple Knowledge Sources**: Uses Wikipedia for historical queries and Wikivoyage for travel-specific information.
+- **Contextual Understanding**: Maintains conversation history to understand follow-up questions and references to previous messages.
+- **Rich Travel Information**: Get recommendations, tips, and practical travel advice for destinations worldwide.
 
+## Requirements
 
-## Knowledge Base
+- Python 3.10+
+- A Telegram Bot Token (obtained from [BotFather](https://t.me/botfather))
+- A Google API Key with access to the Gemini API
 
-The primary knowledge base for this system is derived from the top 100 posts of the year from the subreddit r/JapanTravelTips, including their top 5 comments. Additionally, the system can query Wikipedia to fetch historical information, providing a comprehensive travel guide experience.
-
-## Example Queries
-
-- "Where can I get a Suica card?"
-- "What is the history of the Meiji Shrine?"
-- "Can you recommend some good restaurants in Kyoto?"
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.11+
-- Poetry for dependency management
-
-### Installation
+## Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/japantraveltips.git
-    cd japantraveltips
-    ```
 
-2. Install dependencies using Poetry:
-    ```bash
-    poetry install
-    poetry shell
-    ```
+```bash
+git clone https://github.com/yourusername/travel-assistant-bot.git
+cd travel-assistant-bot
+```
 
-3. Configure environment variables in the `.env` file. Ensure you have the necessary API keys, such as `OPENAI_API_KEY`.
+2. Create a virtual environment and activate it:
 
-### Generating Embeddings
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-If you have a `./data` directory with documents, generate the embeddings:
-    ```bash
-    poetry run generate
-    ```
+3. Install the dependencies:
 
+```bash
+pip install -r requirements.txt
+```
 
-### Running the Development Server
+4. Create a `.env` file based on the template:
 
-Start the FastAPI development server:
-    ```bash
-    python main.py
-    ```
+```bash
+cp .env.template .env
+```
 
+5. Edit the `.env` file and add your Telegram Bot Token and Google API Key.
 
-The API will be available at `http://localhost:8000`.
+## Usage
 
-### API Endpoints
+1. Start the bot:
 
-The system provides two main API endpoints:
+```bash
+python -m app.main
+```
 
-1. **Streaming Chat Endpoint**:
-    ```bash
-    curl --location 'localhost:8000/api/chat' \
-    --header 'Content-Type: application/json' \
-    --data '{ "messages": [{ "role": "user", "content": "Hello" }] }'
-    ```
+2. Open Telegram and start a conversation with your bot.
 
-2. **Non-Streaming Chat Endpoint**:
-    ```bash
-    curl --location 'localhost:8000/api/chat/request' \
-    --header 'Content-Type: application/json' \
-    --data '{ "messages": [{ "role": "user", "content": "Hello" }] }'
-    ```
+3. Use the following commands:
+   - `/start` - Start the bot and get a welcome message
+   - `/help` - Show help information
+   - `/reset` - Clear your conversation history
 
-### Docker
+4. Ask travel-related questions such as:
+   - "What's the history of Tokyo?"
+   - "What are the best places to visit in Paris?"
+   - "How do I get from Narita airport to Tokyo city center?"
+   - "What's the local cuisine like in Barcelona?"
 
-To run the application using Docker:
+## Project Structure
 
-1. Build the Docker image:
-    ```bash
-    docker build -t japantraveltips .
-    ```
+- `app/`: Main application code
+  - `main.py`: Entry point for the application
+  - `telegram_bot.py`: Telegram bot implementation
+  - `chat_history.py`: Handles conversation history storage and retrieval
+  - `llm_service/`: LLM integration services
+    - `intent_classifier.py`: Classifies user intents using Gemini
+    - `response_generator.py`: Generates responses based on classified intents
+    - `travel_llm_service.py`: Main service that coordinates the LLM workflow
+- `Wikipedia/`: Modified Wikipedia library with Wikivoyage support
 
-2. Generate embeddings (if applicable):
-    ```bash
-    docker run \
-      --rm \
-      -v $(pwd)/.env:/app/.env \
-      -v $(pwd)/config:/app/config \
-      -v $(pwd)/data:/app/data \
-      -v $(pwd)/storage:/app/storage \
-      japantraveltips \
-      poetry run generate
-    ```
+## Architecture
 
-3. Start the API:
-    ```bash
-    docker run \
-      -v $(pwd)/.env:/app/.env \
-      -v $(pwd)/config:/app/config \
-      -v $(pwd)/storage:/app/storage \
-      -p 8000:8000 \
-      japantraveltips
-    ```
-
-### Telegram Bot Integration
-
-A Telegram bot can be connected with this API to facilitate user interaction. The bot receives new messages, sends them through the API, and replies back with the LLM-generated responses. The relevant code for the Telegram bot can be found in the following file: [telegram_bot.py](backend/app/telegram_bot.py)
-
-### Documentation
-
-Access the API documentation at `http://localhost:8000/docs` to explore the available endpoints and their usage.
-
-## Contributing
-
-We welcome contributions to enhance the JapanTravelTips API. Please fork the repository and submit pull requests for any improvements or bug fixes.
+1. User sends a message to the Telegram bot
+2. The message and conversation history are passed to the intent classifier
+3. The intent classifier determines whether the query is historical, travel-related, or conversational
+4. Based on the classification, information is retrieved from Wikipedia, Wikivoyage, or generated directly
+5. The response generator creates a human-friendly response
+6. The bot sends the response back to the user
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Acknowledgements
+## Acknowledgments
 
-- [LlamaIndex](https://www.llamaindex.ai/)
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [r/JapanTravelTips](https://www.reddit.com/r/JapanTravelTips/)
-- [Wikipedia](https://www.wikipedia.org/)
+- This project uses a modified version of the [Wikipedia](https://github.com/goldsmith/Wikipedia) library.
+- Powered by Google's Gemini API for natural language understanding and generation.
